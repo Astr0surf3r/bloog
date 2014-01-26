@@ -1,15 +1,15 @@
 class ArticlesController < ApplicationController
   def new
 
-   @scott = Article.new
+   @article = Article.new
 
   end
   
   def create
      
-    #render json: params
+  #render json: params
 
-    @article = Article.find(params[:article])
+  @article = Article.create(params[:article])
   
   if @article.save
 

@@ -9,7 +9,7 @@
 </form>
 -->
 
-<%= form_for (@scott) do |a| %>
+<%= form_for (@article) do |a| %>
   <p>  Title <br />
   <%= a.text_field :title %> </p>
   <p> Body <br />
@@ -19,3 +19,7 @@
 <% end %>
 
 <p>Find me in app/views/articles/new.html.erb</p>
+
+<p>
+<%= link_to 'Go to all articles', root_url %>
+</p>
