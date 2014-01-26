@@ -1,2 +1,21 @@
 <h1>Articles#new</h1>
+
+<!--
+<form method="post" action="/my_new_article">
+
+<input type="text" name="input1">
+<input type="submit">
+
+</form>
+-->
+
+<%= form_for (@scott) do |a| %>
+  <p>  Title <br />
+  <%= a.text_field :title %> </p>
+  <p> Body <br />
+  	<%= a.text_area :body %> </p>
+  
+  <%= a.submit 'Send the Article!'%>
+<% end %>
+
 <p>Find me in app/views/articles/new.html.erb</p>

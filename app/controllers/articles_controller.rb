@@ -1,7 +1,25 @@
 class ArticlesController < ApplicationController
   def new
 
-   @article = Article.new
+   @scott = Article.new
+
+  end
+  
+  def create
+     
+    #render json: params
+
+    @article = Article.find(params[:article])
+  
+  if @article.save
+
+    redirect_to root_path
+
+  else
+    
+    render 'new'
+
+  end
 
   end
 
