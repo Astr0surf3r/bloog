@@ -8,8 +8,8 @@ class ArticlesController < ApplicationController
   def create
      
   #render json: params
-
-  @article = Article.create(params[:article])
+  @article = Article.new(params[:article]) 
+  #@article = Article.create(params[:article])
   
   if @article.save
 
