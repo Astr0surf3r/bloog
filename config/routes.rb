@@ -1,5 +1,9 @@
 Bloog::Application.routes.draw do
 
+  get "comments/new"
+
+  get "comments/index"
+
 =begin 
   get "articles/index"
 
