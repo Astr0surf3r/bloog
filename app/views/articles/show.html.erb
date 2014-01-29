@@ -1,2 +1,14 @@
 <h1>Articles#show</h1>
+
+<%= @article.title %>
+<%= @article.body %>
+
+<% @comments.each do |comment| %>
+
+<%= comment.content %>
+
+<% end %>
+
+<p>
+<%= link_to 'Make New Comments', comments_new_path %> </p>
 <p>Find me in app/views/articles/show.html.erb</p>
