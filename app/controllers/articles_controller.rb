@@ -28,6 +28,8 @@ class ArticlesController < ApplicationController
    @article = Article.find(params[:id])
    @comments = @article.comments
 
+   session[:article_id]
+
   end
 
   def edit

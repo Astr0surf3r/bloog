@@ -1,13 +1,16 @@
 <h1>Articles#show</h1>
 
-<%= @article.title %>
-<%= @article.body %>
+Title:  <%= @article.title %> <br />
+Body: <%= @article.body %> <br>
 
+<p>
+<% a = 0 %>
 <% @comments.each do |comment| %>
-
-<%= comment.content %>
-
+<%= a = a.next %>
+<%= comment.content %> <br />
+<%# end %>
 <% end %>
+</p>
 
 <p>
 <%= link_to 'Make New Comments', comments_new_path %> </p>
