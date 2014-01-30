@@ -1,9 +1,10 @@
 Bloog::Application.routes.draw do
 
-  get "comments/new"
+ # get "comments/new"
 
-  get "comments/index"
+ #get "comments/index"
 
+resources :comments, only: [:new, :index, :create]
 =begin 
   get "articles/index"
 

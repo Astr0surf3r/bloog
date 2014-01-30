@@ -3,7 +3,7 @@
 <%= form_for (@comment) do |comment| %>
 
 <%= comment.text_field :content %>
-
+<%= comment.hidden_field :article_id, :value => session[:article_id]  %>
 <%= comment.submit 'Send the Comment!' %>
 
 <% end %>
